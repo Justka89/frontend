@@ -413,7 +413,7 @@ update msg model loggedIn =
                 |> updateObjective msg (\o -> { o | save = Saved })
                 |> UR.addCmd
                     (Route.replaceUrl loggedIn.shared.navKey
-                        (Route.Community model.community)
+                        (Route.CommunitySettings model.community)
                     )
                 |> UR.addExt (ShowFeedback Success (t "community.objectives.create_success"))
 
